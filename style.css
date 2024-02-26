@@ -1,0 +1,444 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#FFFFFF;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: #28275F;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    margin-top: 4vw;
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    position: fixed;
+    right: 10%;
+    z-index: 1;
+    padding: 15px;
+    padding-top: 10px;
+    font-size: 1.2vw;
+    font-weight: 100;
+    background-color: #28275f83;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-bottom: 3px;
+}
+
+.select {
+    border-bottom: .2vw solid #00D1FF;
+    font-weight: 500;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+.about-me, .projects, .contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6vw;
+}
+
+.about-me, .projects, .contact {
+    position: relative;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects {
+    gap: 3vw;
+}
+
+.content {
+    position: absolute;
+    right: 10%;
+}
+
+.left {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 35%;
+    height: 100%;
+    transition: background-image ease-in-out .5s;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(270deg, #28275F 0%, #28275f00 100%);
+}
+
+.logo {
+    width: 3.5vw;
+}
+
+.home-contact , .home-tittle {
+    text-align: right;
+}
+
+.home-contact{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.home-tittle {
+    width: 63%;
+}
+
+.home-tittle p {
+    color: #00D1FF;
+    font-size: 2.5vw;
+    margin-top: 20px;
+}
+
+h1 {
+    color:#FFFFFF;
+    font-size: 10vw;
+    line-height: 9vw;
+}
+
+h2 {
+    font-size: 7vw;
+}
+
+h3 {
+    width: fit-content;
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+    color:#00D1FF;
+    background-color: #00d0ff2b;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.btn-view-cv {
+    background-color: #00D1FF;
+    height: 4vw;
+    width: 16vw;
+    border-radius: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2vw;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+    transition: background-color ease-in-out .3s;
+    transition: color ease-in-out .3s;
+}
+
+.text-am {
+    width: 56%;
+    line-height: 2vw;
+    font-size: 1.2vw;
+    text-align: right;
+}
+
+.tech {
+    display: flex;
+    gap: 3vw;
+    text-align: right;
+    color: #00D1FF;
+    font-weight: 600;
+}
+
+.frameworks, .languages, .tools {
+    text-align: -webkit-right;
+}
+
+.all-projects {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 35vw;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-right: 1vw;
+    gap: 1vw;
+}
+
+
+.all-projects::-webkit-scrollbar-track {
+    border-radius: 100px;
+}
+
+.all-projects::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project >a {
+    height: 180px;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-info {
+    background-color: #323232;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7vw 1vw;
+}
+
+.project-info p {
+    font-size: 1vw;
+}
+
+.btn-vp {
+    font-size: .8vw;
+    background-color: #00D1FF;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-info a {
+    height: auto;
+    text-decoration: none;
+}
+
+.btn-vp:hover, .project a.project-img:hover + .project-info .btn-vp, .btn-view-cv:hover {
+    background-color: #FFFFFF;
+    color: #00D1FF;
+}
+
+.contact p {
+    width: 56%;
+    font-size: 1.5vw;
+    text-align: right;
+    line-height: 2.5vw;
+}
+
+.fw-800 {
+    color:#00D1FF;
+    background-color: #00d0ff2b;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: color ease-in-out .5s;
+}
+
+.fw-800:hover {
+    color:#FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: .7vw;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00D1FF;
+}
+
+@media screen and (width <= 1024px) {
+    .all-projects {
+        grid-template-columns: repeat(1, 1fr);
+        width: 40vw;
+        max-height: 40vw;
+    }
+
+    .all-projects::after{
+        margin-top: 32vw;
+    }
+}
+
+@media screen and (width <= 425px) {
+    .left {
+        width: 100%;
+        height: 40%;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .left::after {
+        width:100%;
+        height: 30%;
+        background: linear-gradient(180deg, #28275F 0%, #28275f00 100%);
+    }
+
+    .content {
+        right: 0;
+        margin: 0 10%;
+    }
+
+    .navbar {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+        gap: 8vw;
+        font-size: 3vw;
+    }
+
+    .home, .about-me, .projects {
+        height: 60vh;
+        align-items: flex-start;
+    }
+
+    .home {
+        align-items: flex-start;
+        gap: 20vw;
+    }
+
+    .contact {
+        margin-bottom: 100%;
+        height: 65vh;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .home-tittle {
+        width: auto;
+        text-align: left;
+        padding-top: 15vw;
+    }
+
+    .home-tittle p {
+        font-size: 6vw;
+        margin-top: 5px;
+    }
+
+    h1 {
+        font-size: 18vw;
+        line-height: 18vw;
+    }
+
+    h2 {
+        font-size: 12vw;
+    }
+
+    h3 {
+        font-size: 2.5vw;
+    }
+
+    .home-contact {
+        flex-direction: row-reverse;
+    }
+
+    .logo {
+        width: 10vw;
+    }
+
+    .btn-view-cv {
+        height: 9vw;
+        width: 30vw;
+        margin-left: 0;
+        margin-right: 10px;
+        font-size: 5vw;
+        border-radius: 5px;
+    }
+
+    .text-am {
+        text-align: left;
+        width: auto;
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+
+    .frameworks, .languages, .tools {
+        text-align: start;
+    }
+
+    .tech {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-me {
+        gap: 3vw;
+        padding-top: 10vw;
+    }
+
+    .all-projects {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-height: 65vw;
+    }
+
+    .projects {
+        padding-top: 10vw;
+        gap: 7vw;
+    }
+
+    .project > a {
+        height: 90px;
+    }
+
+    .project img {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .project-info {
+        padding: 1vw 2vw;
+    }
+
+    .project-info p {
+        font-size: 2vw;
+    }
+
+    .btn-vp {
+        font-size: 1.2vw;
+    }
+
+    .contact p {
+        width: 100%;
+        text-align: start;
+        font-size: 3vw;
+        line-height: 5vw;
+        padding-bottom: 15px;
+    }
+}
